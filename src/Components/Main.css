@@ -1,0 +1,17 @@
+.main-container {
+  display: flex;
+  width: 100%;
+  z-index: 200;
+  min-width: 476px;
+}
+
+.container-1 {
+  /* border: 2px solid red; */
+  /* min-width: 280px;
+  max-width: 280px; */
+  flex: 1 0 280px;
+}
+
+.container-2 {
+  flex: 3 1 800px;
+}

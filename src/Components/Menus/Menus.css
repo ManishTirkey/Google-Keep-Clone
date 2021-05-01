@@ -1,0 +1,7 @@
+.menu-container {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.menu-container .menus-list {
+  flex-grow: 7;
+}

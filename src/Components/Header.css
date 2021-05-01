@@ -1,0 +1,135 @@
+/* ----------------------------------------------------------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #fff;
+}
+
+.nav,
+.items {
+  display: flex;
+  align-items: center;
+}
+.items {
+  flex-grow: 1;
+}
+
+.nav .first-item {
+  flex-shrink: 0;
+  padding-left: 10px;
+  margin-left: 10px;
+  display: flex;
+}
+.nav .control input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.nav .first-item .img {
+  width: 70px;
+  text-align: center;
+}
+.nav .first-item h2 {
+  font-family: "Product Sans", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.nav .third-item {
+  flex-grow: 15;
+  flex-shrink: 2;
+  justify-content: space-between;
+}
+.nav .third-item .search {
+  margin-left: 50px;
+  flex-basis: 730px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nav .third-item .search #searchInput:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0px 3px 5px 0px #00000082;
+}
+.nav .third-item .search #searchInput {
+  border: none;
+  font-size: 15px;
+  width: 100%;
+  padding: 15px 0 15px 65px;
+  border-radius: 10px;
+  background: rgba(241, 243, 244, 1);
+  position: absolute;
+  z-index: 2;
+}
+.nav .third-item .search button {
+  text-align: center;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 39px;
+  height: 39px;
+  margin-left: 18px;
+  z-index: 3;
+  transition: border-radius 0.2s linear;
+}
+.nav .third-item .search button:hover {
+  border-radius: 50%;
+  background: rgb(216, 221, 224);
+}
+
+.nav .Icons {
+  display: flex;
+  padding: 12px;
+}
+.nav .Icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+.nav .Icon:hover {
+  background: rgba(241, 243, 244, 1);
+}
+
+/* --------------------------------------------------------- */
+.nav .fourth-item {
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.navbar .fourth-item .manish {
+  margin: 0 10px 0 15px;
+  background-color: #ff5722;
+  color: #fff;
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* --------------------------------------------------------- */
+
+.control {
+  /* border: 2px solid red; */
+  position: relative;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+}
+.control input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: transparent;
+  border: none;
+  z-index: 10;
+  outline: none;
+  opacity: 0;
+}

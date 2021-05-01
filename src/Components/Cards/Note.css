@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+.Notes-container {
+  width: 245px;
+  padding: 10px;
+  height: 140px;
+}
+.Notes {
+  border-radius: 10px;
+  position: relative;
+  transition: 0.3s linear;
+  z-index: 30;
+}
+.Notes::after {
+  content: "";
+  clear: both;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 3px 0px rgba(56, 54, 54, 0.5);
+  background: transparent;
+  z-index: -20;
+}
+.Notes .select-notes {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.Notes-container .notes-heading-container .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 50px; */
+}
+
+.Notes-container .notes-heading-container .note-pin {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.Notes-container .notes-heading-container h3 {
+  font-family: "Open Sans", sans-serif;
+  padding: 5px 0 0 10px;
+  color: rgba(31, 30, 30, 0.9);
+  height: 40px;
+  cursor: default;
+}
+.Notes-container .notes-heading-container .heading h3 {
+  font-size: 15px;
+  font-weight: 700;
+}
+.Notes-container .notes-heading-container .notes-text {
+  font-size: 16px;
+  font-weight: 400;
+}
+.Notes-container .notes-icon {
+  display: flex;
+  justify-content: space-evenly;
+}
+.Notes-container .notes-icon div {
+  font-size: 0px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/* displaye: none  */
+
+.disp-none,
+.note-custom-btn .disp-none {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s linear;
+}
+.Notes:hover > .disp-none,
+.Notes:hover .heading .disp-none,
+.Notes:hover .note-custom-btn .disp-none {
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+  color: rgba(71, 71, 71, 1);
+}
+.Notes:hover {
+  box-shadow: 0px 2px 4px 0px rgb(61, 60, 60, 0.5);
+}
+
+/* -------------------------------------------------------------- */
+.note-custom-btn:hover,
+.note-pin:hover {
+  background: rgba(92, 91, 91, 0.1);
+}

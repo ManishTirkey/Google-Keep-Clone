@@ -1,0 +1,192 @@
+.notes-container {
+  margin-top: 8px;
+  height: 89vh;
+}
+.notes {
+  margin-top: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.create-note-container {
+  display: flex;
+  justify-content: center;
+}
+.create-note {
+  border-radius: 8px;
+  padding: 8px;
+  width: 600px;
+  box-shadow: 0px 3px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* ----------------------------------------------------------boxes */
+.note-title,
+.take-a-note {
+  display: flex;
+  justify-content: space-between;
+  /* -----------------title */
+}
+.note-title .pin {
+  display: grid;
+  place-content: center;
+  color: rgba(54, 54, 54, 0.6);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.note-title input[type="text"]:focus {
+  outline: none;
+}
+
+.note-title input[type="text"] {
+  font-family: "Product Sans", Arial, sans-serif;
+  font-size: 16px;
+  border: none;
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 40px;
+  padding-left: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  outline: none;
+}
+/* -----------------title */
+
+/* ---------------------------------------- */
+
+/*-------- take a note  */
+
+.take-a-note input[type="text"]:focus {
+  outline: none;
+}
+.take-a-note input[type="text"] {
+  /* flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50%; */
+  border: none;
+  flex: 1 1 50%;
+  height: 40px;
+  outline: none;
+  padding-left: 10px;
+  font-family: "Product Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  outline: none;
+}
+
+.take-a-note .import-icons {
+  color: rgb(54, 54, 54);
+  display: flex;
+}
+
+.take-a-note .import-icons .imp-icon:nth-child(2) {
+  margin: 0 12px;
+}
+
+.take-a-note .import-icons .imp-icon {
+  color: rgba(54, 54, 54, 0.6);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+}
+
+/*-------- take a note  */
+/* -------------------------------------- */
+/* -------customize-icons  */
+.customize-icons {
+  color: rgba(54, 54, 54, 0.6);
+  display: flex;
+  justify-content: space-between;
+}
+.customize-icons .all-icons {
+  display: flex;
+  justify-content: space-between;
+}
+.customize-icons .all-icons div {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  margin: 0 11px;
+  place-content: center;
+  border-radius: 50%;
+}
+
+.customize-icons .close {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  flex-basis: 80px;
+  margin-right: 10px;
+  font-family: "Product Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+/* -------customize-icons  */
+
+/* ------------------------------cards */
+.cards {
+  flex-grow: 1;
+  margin-top: 30px;
+  padding: 0 15px;
+  overflow-y: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+.cards::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+.cards::-webkit-scrollbar-track {
+  background: rgba(102, 101, 101, 0.8);
+  border-radius: 10px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background: rgba(68, 68, 68, 0.8);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 1);
+}
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/*--------------------------------------------------- events */
+
+.custom-btn {
+  cursor: pointer;
+}
+
+.note-title .pin:hover,
+.take-a-note .import-icons .imp-icon:hover,
+.customize-icons .all-icons div:hover {
+  background-color: rgba(236, 240, 241, 0.9);
+  color: rgb(0, 0, 0);
+}
+
+/*-------------------------------------------------------------------------------------------- events */
+
+.note-title,
+.customize-icons {
+  display: none;
+}
+
+/* -------------------------------------------responsiveness */
+@media only screen and (max-width: 690px) {
+  .create-note {
+    flex-basis: 80%;
+  }
+  .container-2 {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .cards .Notes-container {
+    width: 100%;
+  }
+}

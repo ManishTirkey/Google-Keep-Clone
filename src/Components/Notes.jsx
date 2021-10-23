@@ -38,7 +38,7 @@ const Notes =()=>{
                 if (id !==index){
                     return note
                 }
-                return 
+              
             }); 
         })
     }
